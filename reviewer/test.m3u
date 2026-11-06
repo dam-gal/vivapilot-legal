@@ -1,0 +1,7 @@
+#EXTM3U
+#EXTINF:-1 tvg-id="test1" group-title="Test",Test Channel 1
+https://dam-gal.github.io/vivapilot-legal/reviewer/clip.mp4?ch=1
+#EXTINF:-1 tvg-id="test2" group-title="Test",Test Channel 2
+https://dam-gal.github.io/vivapilot-legal/reviewer/clip.mp4?ch=2
+#EXTINF:-1 tvg-id="test3" group-title="Test",Test Channel 3
+https://dam-gal.github.io/vivapilot-legal/reviewer/clip.mp4?ch=3
