@@ -1,4 +1,4 @@
-# VivaPilot 1.26 – materiały do pola „Dane logowania” (Google Play Console)
+# VivaPilot 1.27 – materiały do pola „Dane logowania” (Google Play Console)
 
 Legenda: **[PEWNE]** wynika z kodu; **[NIE SPRAWDZONO]** nie uruchamiałem aplikacji ani nie miałem dostępu do Twojej strony; **[Z PAMIĘCI]** tak pamiętam, sprawdź w Konsoli.
 
@@ -14,7 +14,7 @@ Legenda: **[PEWNE]** wynika z kodu; **[NIE SPRAWDZONO]** nie uruchamiałem aplik
 4. W oknie jest domyślnie wybrany przełącznik **Xtream Codes**. Dotknij **M3U / M3U8**.
 5. Pole **Name** (`playlists.nameLabel`): np. `Test`.
 6. Pole **M3U/M3U8 file URL** (`playlists.m3uUrlLabel`): `https://dam-gal.github.io/vivapilot-legal/reviewer/test.m3u`
-   **Uwaga: wklejanie jest w aplikacji zablokowane** (funkcja `blockPaste`, PlaylistsScreen.kt). Adres trzeba wpisać ręcznie, znak po znaku. Podpowiedzi klawiatury wstawiające kilka znaków naraz też mogą zostać odrzucone. To zabezpieczenie przed obejściem okresu próbnego; dla recenzenta jest to utrudnienie, dlatego jest ostrzeżenie w tekście dla recenzentów.
+   **Od wersji 1.27 w tym polu można wkleić adres** (długie przytrzymanie → „Wklej”) albo wpisać go ręcznie. Wklejanie jest nadal zablokowane w polach Xtream Codes (adres serwera, login, hasło).
 7. Pole **User-Agent (optional)** jest wstępnie wypełnione (udaje VLC), nie zmieniaj go.
 8. Przycisk **Add** (`common.add`). Aplikacja pobiera listę.
 9. Zakładka **Live** (`tab.live`): kategoria „Test”, kanały **Test Channel 1–3** → dotknij kanału, film się odtwarza. [Kod: PEWNE; działanie na urządzeniu: NIE SPRAWDZONO]
@@ -23,7 +23,7 @@ Legenda: **[PEWNE]** wynika z kodu; **[NIE SPRAWDZONO]** nie uruchamiałem aplik
 4. W oknie **Add playlist** zostaw przełącznik **Xtream Codes**.
 5. Wypełnij pola: **Name**, **Server address (http://host:port)** (`playlists.serverAddressLabel`), **Username**, **Password** (`playlists.usernameLabel`, `playlists.passwordLabel`). Pole **EPG URL (XMLTV, optional)** wypełnia się samo (`playlists.epgUrlAutofilled`), **User-Agent (optional)** jest wstępnie wypełnione.
 6. **Add**. Zakładki **Live**, **Movies**, **Series** pokazują zawartość serwera.
-Wklejanie jest tu zablokowane tak samo (adres, login i hasło wpisuje się ręcznie).
+W polach Xtream Codes wklejanie jest w 1.27 nadal zablokowane (adres, login i hasło wpisuje się ręcznie).
 Dla recenzenta nie ma testowego konta Xtream (patrz p. 2: GitHub Pages tego nie obsłuży), więc w tekście dla recenzentów jest tylko ścieżka M3U.
 
 ## 2. Testowe Źródło treści
@@ -54,11 +54,13 @@ To dane publiczne. W plikach nie ma haseł ani kluczy.
 - Inny format nie jest potrzebny. Nie sprawdziłem, czy GitHub Pages przewija film (Range), ale 15-sekundowy plik nie potrzebuje przewijania.
 
 ## 3. Tekst do pola „Wszelkie inne informacje wymagane do uzyskania dostępu”
-Wersja gotowa jest w pliku `TEKST_DLA_RECENZENTOW_EN.txt`. **470 znaków** (limit 480):
+Wersja gotowa jest w pliku `TEKST_DLA_RECENZENTOW_EN.txt`. **409 znaków** (limit 480):
 
 ```
-No account or login. VivaPilot is a player without its own content. 1) Tick the Terms checkbox, tap Start. 2) Add dialog opens (or: Settings > Manage playlists > +). Tap M3U / M3U8, enter M3U/M3U8 file URL https://dam-gal.github.io/vivapilot-legal/reviewer/test.m3u (type it, paste is disabled), tap Add. 3) Open Live, tap Test Channel 1. Free version works without purchase. Optional one-time Full Version unlocks search, My Lists, suggestions. Promo code: [PROMO CODE]
+No account or login. VivaPilot is a player without its own content. 1) Tick the Terms checkbox, tap Start. 2) Add dialog opens (or: Settings > Manage playlists > +). Tap M3U / M3U8, paste or type the M3U/M3U8 file URL https://dam-gal.github.io/vivapilot-legal/reviewer/test.m3u, tap Add. 3) Open Live, tap Test Channel 1. All features are free for 5 days after first launch; one-time Full Version is optional.
 ```
+
+Zmiany względem 1.26: usunięto „paste is disabled”; usunięto miejsce na kod promocyjny (nie jest potrzebny, bo przez pierwsze 5 dni wszystkie funkcje są dostępne). Jeśli w Play Console wklejono wcześniejszy tekst, wklej tę wersję w jego miejsce.
 
 ## 4. Okres próbny i recenzenci (tylko opis, nic nie zmieniałem)
 
@@ -78,6 +80,6 @@ Reklamy w wariancie „ads” według dokumentów pojawiają się dopiero po okr
 ## 5. Lista rzeczy, które musisz zrobić sam
 1. Wgrać folder `reviewer` na stronę (p. 2) i sprawdzić oba adresy w przeglądarce.
 2. Zainstalować aplikację i sprawdzić, że lista się dodaje, a „Test Channel 1” odtwarza (czego ja nie mogłem sprawdzić).
-3. Wkleić tekst z p. 3 w Play Console i wpisać kod promocyjny w miejsce `[PROMO CODE]` (albo usunąć to zdanie). Kod ustawiasz w Play Console (nie w czacie ani w kodzie).
+3. Wkleić tekst z p. 3 w Play Console (Dane logowania / dostęp do aplikacji), zastępując poprzedni.
 4. Zdecydować, czy wystawiać licencję testową/kod. Jeśli recenzent zapyta o Movies/Series (puste), wyjaśnić, że są dla źródeł Xtream.
 5. Nie wpisywać do pola żadnych prawdziwych haseł.
